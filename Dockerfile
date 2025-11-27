@@ -24,4 +24,5 @@ RUN make
 
 FROM nginx:1.29
 
+WORKDIR "/usr/share/nginx/html/sctv"
 COPY --from=0 --chown=nginx:nginx "/app/index.html" "/app/main.js" "/app/doom.wasm" "/usr/share/nginx/html/sctv"
