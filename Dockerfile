@@ -4,7 +4,6 @@ FROM debian:forky-slim
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     ca-certificates \
-    clang-19 \
     binaryen \
     clang-19 \
     make \
