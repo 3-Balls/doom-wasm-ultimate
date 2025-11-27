@@ -6,6 +6,7 @@ RUN apt-get update && \
     ca-certificates \
     binaryen \
     clang-19 \
+    llvm-19 \
     make \
     rustup
 
