@@ -17,7 +17,7 @@ RUN rustup update && \
     rustup target add wasm32-unknown-unknown --toolchain 1.91.1
 
 WORKDIR "/app"
-COPY --exclude=Dockerfile . "/app"
+COPY --exclude=Dockerfile --exclude=.git . "/app"
 RUN ln -s /usr/bin/clang-19 /usr/bin/clang
 RUN ln -s /usr/bin/clang-19 /usr/bin/cc
 RUN make
