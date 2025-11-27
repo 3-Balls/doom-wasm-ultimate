@@ -18,6 +18,8 @@ RUN rustup update && \
 
 WORKDIR "/app"
 COPY --exclude=Dockerfile . "/app"
+RUN ln -s /usr/bin/clang-19 /usr/bin/clang
+RUN ln -s /usr/bin/clang-19 /usr/bin/cc
 RUN make
 
 FROM nginx:1.29
